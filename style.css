@@ -2305,6 +2305,31 @@ nav ul li a.active::after {
   position: relative;
 }
 
+.founder-text p {
+  margin-bottom: 20px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.founder-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #4680ff;
+  background: linear-gradient(135deg, #4680ff, rgba(218, 165, 32, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 15px 0 25px 0;
+  padding: 10px;
+  border: 2px solid #4680ff;
+  border-radius: 25px;
+  background-color: rgba(70, 128, 255, 0.05);
+  position: relative;
+}
+
 /* Decorative background pattern for achievements */
 .founder-achievements::before {
   content: '';
