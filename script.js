@@ -889,3 +889,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const form = this;
+  const formData = new FormData(form);
+  
+  // Show loading state
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+  
+  fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          // Show success message
+          document.getElementById('successMessage').style.display = 'block';
+          form.reset();
+      } else {
+          alert('There was an error sending your message. Please try again.');
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error sending your message. Please try again.');
+  })
+  .finally(() => {
+      // Reset button
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+  });
+});

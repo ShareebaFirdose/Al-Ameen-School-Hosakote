@@ -2279,15 +2279,7 @@ nav ul li a.active::after {
   padding-bottom: 18px;
 }
 
-.founder-text h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #4680ff, rgba(218, 165, 32, 0.8));
-}
+
 
 .founder-text p {
   margin-bottom: 20px;
@@ -2305,18 +2297,13 @@ nav ul li a.active::after {
   position: relative;
 }
 
-.founder-text p {
-  margin-bottom: 20px;
-  color: #444;
-  line-height: 1.7;
-}
 
 .founder-title {
   text-align: center;
   font-weight: 600;
   font-size: 18px;
-  color: #4680ff;
-  background: linear-gradient(135deg, #4680ff, rgba(218, 165, 32, 0.8));
+  color: #ff0606;
+  background: linear-gradient(135deg, #000000, rgba(0, 0, 0, 0.8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2324,7 +2311,7 @@ nav ul li a.active::after {
   letter-spacing: 1px;
   margin: 15px 0 25px 0;
   padding: 10px;
-  border: 2px solid #4680ff;
+  border: 3px solid #ff1313;
   border-radius: 25px;
   background-color: rgba(70, 128, 255, 0.05);
   position: relative;
